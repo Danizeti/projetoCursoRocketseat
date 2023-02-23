@@ -34,7 +34,7 @@ body * {
   width: 100%;
   max-width: 588px;
   margin: 56px auto 0px;
-  padding: 24px;
+  padding: 0 24px;
 }
 
 /* PROFILE */
@@ -54,7 +54,7 @@ body * {
 #switch {
   position: relative;
   width: 64px;
-  height: 24px;
+
   margin: 4px auto;
 }
 #switch button {
@@ -65,10 +65,11 @@ body * {
   border-radius: 50%;
 
   position: absolute;
-  z-index: 1;
-  left: 0;
   top: 50%;
+  left: 0;
+  z-index: 1;
   transform: translateY(-50%);
+
   animation: slide-dark 0.3s;
 }
 .light #switch button {
@@ -94,34 +95,39 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 24px;
+  padding: 24px 0;
 }
 ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 16px 24px;
+
+  background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
-  background: var(--surface-color);
+
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
   text-decoration: none;
   font-weight: 500;
 
   transition: background 0.2s;
 }
 ul li a:hover {
-  border: 1.5px solid var(--text-color);
   background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
 }
 
 /* SOCIAL LINKS */
 #social-links {
   display: flex;
-  flex-direction: row;
+
   justify-content: center;
-  align-items: flex-start;
-  padding: 24px;
+
+  padding: 24px 0;
   font-size: 24px;
 }
 #social-links a {
